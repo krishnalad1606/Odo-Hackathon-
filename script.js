@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// ================= HERO BUTTONS =================
-
-function planTrip() {
-=======
+// navabar
 function toggleMore() {
     const options = document.getElementById("moreOptions");
 
@@ -39,27 +35,10 @@ function closeModal() {
 
 function switchToSignup() {
     closeModal();
->>>>>>> b353a38593b9895a40f33809d2430ab0d61b42e8
     openSignup();
 }
 
 
-<<<<<<< HEAD
-function exploreDestinations() {
-    document
-        .getElementById("destinations")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
-}
-
-
-function viewAll() {
-    alert("Destination explorer coming soon!");
-}
-
-
-=======
 // SWITCH TO LOGIN
 
 function switchToLogin() {
@@ -103,4 +82,23 @@ function signup() {
 
     closeModal();
 }
->>>>>>> b353a38593b9895a40f33809d2430ab0d61b42e8
+
+// ================= HERO BUTTONS =================
+
+function planTrip() {
+    openSignup();
+}
+
+
+function exploreDestinations() {
+    document
+        .getElementById("destinations")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+}
+
+
+function viewAll() {
+    alert("Destination explorer coming soon!");
+}
