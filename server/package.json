@@ -1,18 +1,14 @@
 {
-  "name": "server",
+  "name": "odo-hackathon-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Simple backend for Globe Trotter",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "express": "^5.2.1"
-  },
-  "devDependencies": {}
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
 }
