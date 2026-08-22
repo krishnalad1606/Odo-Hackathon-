@@ -23,10 +23,9 @@
             <a href="#itinerary-builder">Itinerary Builder</a>
 
             <div class="dropdown">
-                <button class="more-btn" onclick="toggleMore()">
+                <button class="more-btn" onclick="toggleMore(event)">
                     More
                     <i class="fa-solid fa-caret-down"></i>
-                </a>
                 </button>
 
                 <div class="more-options" id="moreOptions">
@@ -38,6 +37,7 @@
                     <a href="#share-trip">Share Trip</a>
                     <a href="#profile">Profile</a>
                 </div>
+
             </div>
         </nav>
 
@@ -159,6 +159,51 @@
       </div>
     </div>
     </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+            <h2>🌐 Globe Trotter</h2>
+            <p>
+                Plan your journey, discover amazing destinations,
+                and make every trip unforgettable.
+            </p>
+            </div>
+
+            <div class="footer-column">
+            <h3>Explore</h3>
+            <a href="#">Dashboard</a>
+            <a href="#">Create Trip</a>
+            <a href="#">My Trips</a>
+            <a href="#">Itinerary Builder</a>
+            </div>
+
+            <div class="footer-column">
+            <h3>Travel</h3>
+            <a href="#">Destinations</a>
+            <a href="#">Activities</a>
+            <a href="#">Travel Tips</a>
+            <a href="#">Budget Planner</a>
+            </div>
+
+            <div class="footer-column">
+            <h3>Support</h3>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Globe Trotter. All Rights Reserved.</p>
+            <button onclick="topFunction()">
+                <i class="fa-solid fa-arrow-up-long"></i>
+                Back to Top</button>
+        </div>
+    </footer>
 
     <script src="./script.js"></script>
 </body>

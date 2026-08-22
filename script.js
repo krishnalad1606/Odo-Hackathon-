@@ -1,5 +1,7 @@
 // navabar
-function toggleMore() {
+function toggleMore(event) {
+    event.stopPropagation();
+
     const options = document.getElementById("moreOptions");
 
     if (options.style.display === "block") {
@@ -8,6 +10,12 @@ function toggleMore() {
         options.style.display = "block";
     }
 }
+    document.addEventListener("click", function () {
+        document.getElementById("moreOptions").style.display = "none";
+    });
+    document.getElementById("moreOptions").addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
 
 // OPEN LOGIN
 
@@ -101,4 +109,15 @@ function exploreDestinations() {
 
 function viewAll() {
     alert("Destination explorer coming soon!");
+}
+
+// Display current year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Back to Top function
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 }
