@@ -4,9 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odoo Hackhathon</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="./assets/logo2.png" alt="logo" height= "80px" width="80px">
+            <strong>Globe Trotter</strong>
+        </div>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#create-trip">Create Trip</a>
+            <a href="#my-trips">My Trips</a>
+            <a href="#itinerary-builder">Itinerary Builder</a>
+
+            <div class="dropdown">
+                <button class="more-btn" onclick="toggleMore()">
+                    More
+                    <i class="fa-solid fa-caret-down"></i>
+                </a>
+                </button>
+
+                <div class="more-options" id="moreOptions">
+                    <a href="#city-search">City Search</a>
+                    <a href="#activity-search">Activity Search</a>
+                    <a href="#itinerary-view">Itinerary View</a>
+                    <a href="#budget">Budget</a>
+                    <a href="#calender">Calender</a>
+                    <a href="#share-trip">Share Trip</a>
+                    <a href="#profile">Profile</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="auth-buttons">
+            <button class="login-btn" onclick="openLogin()">Login</button>
+            <button class="signup-btn" onclick="openSignup()">Sign Up</button>
+        </div>
+
+        <!-- LOGIN MODAL -->
+
+        <div id="loginModal" class="modal">
+            <div class="modal-box">
+
+                <span class="close" onclick="closeModal()">×</span>
+
+                <h2>Welcome Back!</h2>
+                <p>Login to continue planning your trips.</p>
+
+                <input type="email" id="loginEmail" placeholder="Email">
+
+                <input type="password" id="loginPassword" placeholder="Password">
+
+                <button class="modal-btn" onclick="login()">Login</button>
+
+                <div class="switch-text">
+                    Don't have an account?
+                    <span onclick="switchToSignup()">Sign Up</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SIGN UP MODAL -->
+
+        <div id="signupModal" class="modal">
+            <div class="modal-box">
+
+                <span class="close" onclick="closeModal()">×</span>
+
+                <h2>
+                    Create Account
+                    <i class="fa-solid fa-paper-plane"></i>
+                </h2>
+                <p>Start planning your dream journey.</p>
+
+                <input type="text" id="signupName" placeholder="Full Name">
+
+                <input type="email" id="signupEmail" placeholder="Email">
+
+                <input type="password" id="signupPassword" placeholder="Password">
+
+                <button class="modal-btn" onclick="signup()">Create Account</button>
+
+                <div class="switch-text">
+                    Already have an account?
+                    <span onclick="switchToLogin()">Login</span>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
     <!-- Hero section -->
     <section class="hero" id="explore">
 
@@ -68,5 +161,6 @@
     </div>
     </section>
 
+    <script src="./script.js"></script>
 </body>
 </html>
